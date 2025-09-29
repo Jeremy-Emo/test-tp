@@ -151,16 +151,22 @@ body {
 }
 
 
-  @keyframes scroll-left {
-    0%   { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
 
-  @font-face {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@font-face {
     font-family: 'efitype_reverse';
     src: url('efitype_reverse.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
 
 @keyframes scroll-left {
     0% {
@@ -172,7 +178,7 @@ body {
     }
 }
 
-.header-content{
+.header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +190,8 @@ body {
     font-weight: 700;
     font-style: normal;
 }
-header{
+
+header {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -192,7 +199,7 @@ header{
 }
 
 
-.taches{
+.taches {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -201,6 +208,7 @@ header{
     margin-top: 10px;
     gap: 20px;
 }
+
 /* div_taches */
 .div_taches {
     display: flex;
@@ -211,13 +219,15 @@ header{
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: var(--tag-border-radius);
 }
-.div_head_taches{
+
+.div_head_taches {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .add-task-btn {
     background-color: var(--tag-bg-color);
     color: var(--tag-text-color);
@@ -228,9 +238,11 @@ header{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .add-task-btn:hover {
     background-color: #2980b9;
 }
+
 .add-task-btn:active {
     transform: scale(0.95);
 
