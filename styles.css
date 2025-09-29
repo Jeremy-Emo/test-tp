@@ -44,6 +44,7 @@ textarea{
     font-size: 14px;
     resize: none;
     background-color: var(--description-bg-color);
+<<<<<<< Updated upstream
     font-family: "Alan Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -66,4 +67,6 @@ textarea{
 }
 .tag:active{
     transform: scale(0.95);
+=======
+>>>>>>> Stashed changes
 }
