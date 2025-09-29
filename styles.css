@@ -16,14 +16,16 @@
     --tag-border-radius: 10px;
 }
 
-.div_carte {
-    width: 300px;
+.board {
+    width: 400px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
+    gap: 10px;
 }
 
 .div_tags {
@@ -35,9 +37,10 @@
 
 }
 
-.div_description {
+.div_description  {
     text-align: justify;
 }
+
 
 .div_taches textarea {
     width: 100%;
@@ -52,6 +55,47 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+#taskTitle {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--description-bg-color);
+    font-family: "Alan Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+#taskDescription {
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--description-bg-color);
+    font-family: "Alan Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 10px;    
+}
+
+#addBoardBtn {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--tag-bg-color);
+    color: var(--tag-text-color);
+    border: none;
+    border-radius: var(--tag-border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* chaque tag a une couleur de fond aleatoire */
