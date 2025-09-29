@@ -44,4 +44,26 @@ textarea{
     font-size: 14px;
     resize: none;
     background-color: var(--description-bg-color);
+    font-family: "Alan Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* chaque tag a une couleur de fond aleatoire */
+.tag{
+    padding: 5px 10px;
+    border-radius: var(--tag-border-radius); 
+     font-family: "Alan Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    user-select: none;
+}
+.tag:hover{
+    opacity: 0.8;
+}
+.tag:active{
+    transform: scale(0.95);
 }
