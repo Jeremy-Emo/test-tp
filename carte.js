@@ -58,7 +58,8 @@ function loadCartesFromLocalStorage() {
     const cartes = JSON.parse(localStorage.getItem('cartes')) || {};
     Object.keys(cartes).forEach(id => {
         const carteData = cartes[id];
-        document.body.appendChild(add_carte(carteData.tags, carteData.description, id));
+        const carteElement = add_carte(carteData.tags, carteData.description, id);
+        document.querySelector('.div_taches').appendChild(carteElement);
     });
 }
 
