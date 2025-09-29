@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Trello 2.0 </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styless.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,43 +17,28 @@
 <body>
     <script src="script.js">
     </script>
+<a href="file:///C:/Users/lebru/projet/test-tp/image.html">=]</a>
 
     <script src="carte.js"></script>
 
 <header>
-    <div class="header-content">
-        <h1> Mon gestionnaire de tâches </h1>
+    <div>
+        <h1> Mon gestionnaire de tâche </h1>
         <h3> S'organiser facilement </h3>
     </div>
 </header>
 
 <main>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    <script>
-        var scalar = 2;
-        var tada = confetti.shapeFromText({ text: '🎉', scalar });
-    </script>
-
     <section>
         <div class="board">
-            <input type="text" placeholder="Titre de la tâche" id="taskTitle">
-            <textarea placeholder="Description" id="taskDescription"></textarea>
+            <input type="text" placeholder="Titre de la tâche" id="">
+            <textarea placeholder="Description" id=""></textarea>
         </div>
-        <button id="addBoardBtn" onClick="confetti({ particleCount: 500, shapes: [tada], scalar, origin: { y: 0.6 } });">
-            Ajouter un tableau
-        </button>
+        <button id="addBoardBtn"> Ajouter un tableau </button>
     </section>
 </main>
-<section class="taches">
 
-    <!-- <div class="div_taches en_cours">
-        <div class="div_head_taches">
-            <h2> En cours </h2>
-            <button class="add-task-btn">Ajouter une tâche</button>
-        </div>
-    
-    </div> -->
-</section>
+<div class="div_taches"></div>
 
 
 
@@ -66,7 +51,6 @@
         <p>Fait par Ramen, Houmous, Tacos, Eliott, Caillou et Béatrice</p>
     </div>
 </footer>
-
 </body>
 
 </html>
