@@ -17,14 +17,15 @@
 }
 
 .board {
-    width: 300px;
+    width: 400px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
+    gap: 10px;
 }
 
 .div_tags {
