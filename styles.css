@@ -73,3 +73,42 @@ textarea {
     transform: scale(0.95);
 
 }
+
+main-footer {
+    background-color: #F4F5F7;
+
+    border-top: 1px solid #dfe1e6;
+
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.footer-link {
+    color: #5e6c84;
+
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #5e6c84;
+    font-size: 14px;
+    margin: 0;
+}
