@@ -1,0 +1,7 @@
+{
+  "columns": [
+    { "name": "À faire", "tasks": [] },
+    { "name": "En cours", "tasks": [] },
+    { "name": "Terminé", "tasks": [] }
+  ]
+}
