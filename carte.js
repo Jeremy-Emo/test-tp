@@ -1,4 +1,4 @@
-function add_carte(tags = [], description = '', id = null) {
+function add_carte(tags = [], description = '', parent_id = null, id = null) {
 
     // creation d'un id unique
     const uniqueId = id || 'carte_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
@@ -41,7 +41,8 @@ function add_carte(tags = [], description = '', id = null) {
         const cartes = JSON.parse(localStorage.getItem('cartes')) || {};
         cartes[uniqueId] = {
             tags: tags,
-            description: event.target.value
+            description: event.target.value,
+            parent_id: parent_id
         };
         localStorage.setItem('cartes', JSON.stringify(cartes));
     });
@@ -58,9 +59,74 @@ function loadCartesFromLocalStorage() {
     const cartes = JSON.parse(localStorage.getItem('cartes')) || {};
     Object.keys(cartes).forEach(id => {
         const carteData = cartes[id];
-        const carteElement = add_carte(carteData.tags, carteData.description, id);
-        document.querySelector('.div_taches').appendChild(carteElement);
+        const carteElement = add_carte(carteData.tags, carteData.description, carteData.parent_id, id);
+        if (carteData.parent_id) {
+            const parentSection = document.getElementById(carteData.parent_id);
+            if (parentSection) {
+                parentSection.appendChild(carteElement);
+                return; // Exit the function to avoid appending again at the end
+            }else{
+                // creer la section si elle n'existe pas
+                const newSection = add_section_taches("En cours", carteData.parent_id);
+                document.querySelector('.taches').appendChild(newSection);
+                newSection.appendChild(carteElement);
+                return; // Exit the function to avoid appending again at the end
+            }
+        }
     });
 }
 
+
+
+function add_section_taches(nom_section = "En cours", id = null) {
+    // Create a unique ID for the section if not provided
+    const uniqueId = id || 'section_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
+
+    // Create the main section div
+    const divSection = document.createElement('div');
+    divSection.classList.add('div_taches', 'en_cours');
+    divSection.id = uniqueId;
+
+    // Create the header for the section
+    const divHeadTaches = document.createElement('div');
+    divHeadTaches.classList.add('div_head_taches');
+
+    // Add the section title
+    const h2 = document.createElement('h2');
+    h2.textContent = nom_section;
+
+    // Add the "Ajouter une tâche" button
+    const button = document.createElement('button');
+    button.classList.add('add-task-btn');
+    button.textContent = 'Ajouter une tâche';
+
+    // Append the title and button to the header
+    divHeadTaches.appendChild(h2);
+    divHeadTaches.appendChild(button);
+
+    // Append the header to the main section div
+    divSection.appendChild(divHeadTaches);
+
+    // Add event listener to the button to add a new carte
+    button.addEventListener('click', () => {
+        const newCarte = add_carte([], "", divSection.id);
+        divSection.appendChild(newCarte);
+    });
+
+    // Append the section to the body or a specific container
+    return divSection;
+}
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('addBoardBtn').addEventListener('click', () => {
+
+        // get task title from input
+        const taskTitle = document.getElementById('taskTitle').value || "Nouvelle section";
+        const taskDescription = document.getElementById('taskDescription').value || "";
+
+        const newSection = add_section_taches(taskTitle);
+        document.querySelector('.taches').appendChild(newSection);
+    });
+});
+
 window.addEventListener('load', loadCartesFromLocalStorage);
+
