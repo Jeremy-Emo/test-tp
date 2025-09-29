@@ -28,12 +28,20 @@
 </header>
 
 <main>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        var scalar = 2;
+        var tada = confetti.shapeFromText({ text: '🎉', scalar });
+    </script>
+
     <section>
         <div class="board">
             <input type="text" placeholder="Titre de la tâche" id="">
             <textarea placeholder="Description" id=""></textarea>
         </div>
-        <button id="addBoardBtn"> Ajouter un tableau </button>
+        <button id="addBoardBtn" onClick="confetti({ particleCount: 500, shapes: [tada], scalar, origin: { y: 0.6 } });">
+            Ajouter un tableau
+        </button>
     </section>
 </main>
 
@@ -50,6 +58,7 @@
         <p>Fait par Ramen, Houmous, Tacos, Eliott, Caillou et Béatrice</p>
     </div>
 </footer>
+
 </body>
 
 </html>
