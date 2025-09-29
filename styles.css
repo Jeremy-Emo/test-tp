@@ -47,7 +47,7 @@ textarea {
     font-size: 14px;
     resize: none;
     background-color: var(--description-bg-color);
-    font-family: "Alan Sans", sans-serif;
+    font-family: "efitype_reverse", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -57,7 +57,7 @@ textarea {
 .tag {
     padding: 5px 10px;
     border-radius: var(--tag-border-radius);
-    font-family: "Alan Sans", sans-serif;
+    font-family: "efitype_reverse", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -90,7 +90,7 @@ main-footer {
     margin: 0 auto;
 
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     gap: 20px;
 
@@ -157,3 +157,10 @@ body {
     0%   { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
   }
+
+  @font-face {
+    font-family: 'efitype_reverse';
+    src: url('efitype_reverse.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
