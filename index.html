@@ -21,8 +21,8 @@
     <script src="carte.js"></script>
 
 <header>
-    <div>
-        <h1> Mon gestionnaire de tâche </h1>
+    <div class="header-content">
+        <h1> Mon gestionnaire de tâches </h1>
         <h3> S'organiser facilement </h3>
     </div>
 </header>
@@ -36,16 +36,24 @@
 
     <section>
         <div class="board">
-            <input type="text" placeholder="Titre de la tâche" id="">
-            <textarea placeholder="Description" id=""></textarea>
+            <input type="text" placeholder="Titre de la tâche" id="taskTitle">
+            <textarea placeholder="Description" id="taskDescription"></textarea>
         </div>
         <button id="addBoardBtn" onClick="confetti({ particleCount: 500, shapes: [tada], scalar, origin: { y: 0.6 } });">
             Ajouter un tableau
         </button>
     </section>
 </main>
+<section class="taches">
 
-<div class="div_taches"></div>
+    <!-- <div class="div_taches en_cours">
+        <div class="div_head_taches">
+            <h2> En cours </h2>
+            <button class="add-task-btn">Ajouter une tâche</button>
+        </div>
+    
+    </div> -->
+</section>
 
 
 
