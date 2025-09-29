@@ -48,7 +48,7 @@
     font-size: 14px;
     resize: none;
     background-color: var(--description-bg-color);
-    font-family: "Alan Sans", sans-serif;
+    font-family: "efitype_reverse", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -58,7 +58,7 @@
 .tag {
     padding: 5px 10px;
     border-radius: var(--tag-border-radius);
-    font-family: "Alan Sans", sans-serif;
+    font-family: "efitype_reverse", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -79,7 +79,7 @@
     margin: 0 auto;
 
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     gap: 20px;
 
@@ -143,12 +143,24 @@ body {
 .scroll-text {
     display: inline-block;
     font-size: 1rem;
-    font-family: Arial, sans-serif;
+    font-family: 'efitype_reverse', sans-serif;
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     animation: scroll-left 10s linear infinite;
 }
+
+
+  @keyframes scroll-left {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @font-face {
+    font-family: 'efitype_reverse';
+    src: url('efitype_reverse.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
 @keyframes scroll-left {
     0% {
@@ -167,7 +179,7 @@ body {
     justify-content: center;
     text-align: center;
 
-    font-family: "Alan Sans", sans-serif;
+    font-family: "efitype_reverse", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -221,4 +233,5 @@ header{
 }
 .add-task-btn:active {
     transform: scale(0.95);
+
 }
