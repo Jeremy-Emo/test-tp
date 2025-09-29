@@ -66,3 +66,4 @@ function loadCartesFromLocalStorage() {
 // Load cartes on page load
 window.addEventListener('load', loadCartesFromLocalStorage);
 document.body.appendChild(add_carte(['Tag1', 'Tag2'], 'This is a sample description.'));
+document.body.appendChild(add_carte(['Tag1', 'Tag2'], 'This is a sample description.'));
