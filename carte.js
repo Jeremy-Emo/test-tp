@@ -62,5 +62,4 @@ function loadCartesFromLocalStorage() {
     });
 }
 
-// Load cartes on page load
 window.addEventListener('load', loadCartesFromLocalStorage);
